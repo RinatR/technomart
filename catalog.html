@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Техномарт</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Cuprum&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <header class="main-header">
+        <div class="header-row-top">
+          <div class="layout-center clearfix">
+            <div class="logo">
+              <a href="index.html">Техномарт</a>
+            </div>
+            <div class="header-element search">
+              <input type="search" name="search-field" id="search" placeholder="Поиск:">
+            </div>
+            <div class="header-element bookmarks">
+              <a href="#">Закладки: 0</a>
+            </div>
+            <div class="header-element basket">
+              <a href="#">Корзина: 10</a>
+            </div>
+            <div class="header-element checkout">
+              <a href="#">Оформить заказ </a>
+            </div>
+          </div>
+        </div>
+        <div class="layout-center">
+          <div class="header-row-middle clearfix">
+            <div class="shop-title">
+              <p>Интернет-магазин<br> строительных материалов <br>и инструментов для ремонта</p>
+            </div>
+            <div class="contacts">
+              <span class="phone">+7(812) 555-05-55</span>
+              <span class="address">г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8</span>
+            </div>
+            <div class="profile-block">
+              <div class="user-name">Равшан Джамшутович</div>
+              <a class="orders" href="#">Мои заказы</a>
+              <a class="account" href="#">Личный кабинет</a>
+            </div>
+          </div>
+          <div class="header-row-bottom">
+            <nav class="main-navigation">
+              <a href="index.html">Главная</a>
+              <a href="#">Компания</a>
+              <a href="#">Каталог</a>
+              <a href="#">Новости</a>
+              <a href="#">Спецпредложения</a>
+              <a href="#">Доставка</a>
+              <a href="#">Контакты</a>
+            </nav>
+          </div>
+        </div>
+    </header>
+    <header class="page-header">
+      <div class="layout-center">
+        <div class="breadcrumbs">
+          <ul>
+            <li> </li>
+            <li><a href="#">Каталог </a> </li>
+            <li><a href="#">Инструменты </a> </li>
+            <li>Перфораторы</li>
+          </ul>
+        </div>
+        <div class="page-title">
+          <h1>Перфораторы </h1>
+        </div>
+      </div>
+    </header>
+    <div class="catalog">
+      <div class="layout-center clearfix">
+        <div class="left-filter">
+          <form action="/echo" method="post">
+            <div class="filter-title">Фильтр:</div>
+            <div class="filter-block">
+              <div class="filter-name">Цена</div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"> </div>
+                </div>
+                <div class="toggle min-toggle"></div>
+                <div class="toggle max-toggle"></div>
+              </div>
+              <div class="price-controls">
+                <input name="min-price" type="text" value="0">
+                <input name="max-price" type="text" value="30000">
+              </div>
+            </div>
+            <div class="filter-block">
+              <div class="filter-name">Производители</div>
+              <div class="filter-controls">
+                <input type="checkbox" name="bosch" id="bosch" checked>
+                <label for="bosch">Bosch</label>
+              </div>
+              <div class="filter-controls">
+                <input type="checkbox" name="interskol" id="interskol">
+                <label for="interskol">Интерскол</label>
+              </div>
+              <div class="filter-controls">
+                <input type="checkbox" name="makita" id="makita" checked>
+                <label for="makita">Makita</label>
+              </div>
+              <div class="filter-controls">
+                <input type="checkbox" name="dewalt" id="dewalt">
+                <label for="dewalt">Dewalt</label>
+              </div>
+              <div class="filter-controls">
+                <input type="checkbox" name="hitachi" id="hitachi">
+                <label for="hitachi">Hitachi</label>
+              </div>
+            </div>
+            <div class="filter-block">
+              <div class="filter-name">Питание</div>
+              <div class="filter-controls">
+                <input type="radio" name="power" id="battery" checked>
+                <label for="battery">Аккумуляторные</label>
+              </div>
+              <div class="filter-controls">
+                <input type="radio" name="power" id="wired">
+                <label for="wired">Сетевые</label>
+              </div>
+            </div>
+            <input type="submit" class="btn filter-btn" value="Показать">
+          </form>
+        </div>
+        <div class="catalog-content">
+          <div class="top-filter">
+            <span>Сортировка:</span>
+            <a href="#" >По цене </a>
+            <a href="#">По типу </a>
+            <a href="#">По функционалу</a>
+            <a class="sort up"> </a>
+            <a class="sort down"> </a>
+          </div>
+          <div class="catalog-items">
+            <article class="item">Перфоратор</article>
+            <article class="item">Перфоратор</article>
+            <article class="item">Перфоратор</article>
+            <article class="item">Перфоратор</article>
+            <article class="item">Перфоратор</article>
+            <article class="item">Перфоратор</article>
+            <article class="item">Перфоратор</article>
+            <article class="item">Перфоратор</article>
+            <article class="item">Перфоратор</article>
+          </div>
+          <div class="paginator">
+            <a class="btn btn-paginator" href="#">1</a>
+            <a class="btn btn-paginator" href="#">2</a>
+            <a class="btn btn-paginator" href="#">3</a>
+            <a class="btn btn-paginator" href="#">следующая</a>
+          </div>
+        </div>
+      </div>
+      <div class="about-product">
+        <div class="layout-center">
+          <h1 class="title">Пару слов о перфораторах </h1>
+          <p>Перфоратор - универсальный строительный инструмент.Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуреповерта и отбойного молотка.
+          В ассортиментном ряду есть выбор "трехрежимников": в одном устройстве будут совмещены отбойный молоток и ударная дрель </p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+          <div class="row-top">
+            <div class="layout-center clearfix">
+              <div class="logo-column">
+                <div class="logo">Техномарт</div>
+                <div class="address">
+                  <span>г.Санкт-Петербург, ул.Б.Конюшенная д.19/8 </span>
+                  <span>+7(812) 555-05-55</span>
+                </div>
+              </div>
+              <div class="navigation-column">
+                <nav class="footer-navigation top">
+                  <a href="#">Компания</a>
+                  <a href="#">Новости</a>
+                  <a href="#">Каталог</a>
+                  <a href="#">Доставка</a>
+                  <a href="#">Контакты</a>
+                </nav>
+                <nav class="footer-navigation bottom">
+                  <a href="#">Материалы </a>
+                  <a href="#">Техника</a>
+                  <a href="#">Инструмент </a>
+                  <a href="#">Спецпредложения</a>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="row-bottom">
+            <div class="layout-center clearfix">
+              <div class="copyright">
+                2010-2015 Компания Техномарт
+                Все права защищены
+              </div>
+              <div class="social">
+                <a class="social-btn" href="#"> </a>
+                <a class="social-btn" href="#"> </a>
+                <a class="social-btn" href="#"> </a>
+              </div>
+              <div class="feedback">
+                <span>Обратная связь:</span>
+                <a href="#">mail@htmlacademy.ru</a>
+              </div>
+              <div class="design">
+                <span>Разработано-</span>
+                <a href="#">htmlacademy.ru</a>
+              </div>
+            </div>
+          </div>
+    </footer>
+  </body>
+</html>
