@@ -794,34 +794,37 @@ input[type="search"] {
   transform: translate(-1240px);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .company-info {
   margin-bottom: 80px;
 }
 
 .about {
   float: left;
-  width: 600px;
+  width: 530px;
+}
+
+.about .title,
+.contacts .title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 22px;
+  font-size: 30px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.about .text,
+.contacts .text {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 26px;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 .transport-list {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 39px;
   padding: 0;
   list-style: none;
 }
@@ -845,20 +848,21 @@ input[type="search"] {
   background-color: red;
 }
 
+.btn-about {
+  width: 220px;
+  padding: 10px 0;
+}
+
 .company-info .contacts {
   float: right;
   width: 260px;
 }
 
-.company-info .title {
-  margin: 0;
-}
-
 .map {
   width: 260px;
-  height: 156px;
+  height: 159px;
   background-color: #e5e5e5;
-  margin-bottom: 20px;
+  margin-bottom: 42px;
 }
 
 .btn-contacts {
@@ -999,27 +1003,6 @@ input[type="search"] {
   background-color: #f1f1f1;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .catalog-content {
   float: right;
   width: 700px;
@@ -1073,12 +1056,26 @@ input[type="search"] {
 
 .logo-column {
   float: left;
-  width: 300px;
+  width: 320px;
 }
 
-.logo-column .logo {
+.logo-footer {
   margin-bottom: 30px;
-  padding: 15px 60px;
+}
+
+.logo-footer a {
+  display: block;
+  width: 220px;
+  padding: 22px 0;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ef3644;
+  box-shadow: 0 5px 0 0 #b52933;
   color: #ffffff;
 }
 
