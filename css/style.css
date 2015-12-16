@@ -434,23 +434,15 @@ input[type="search"] {
   text-align: center;
   color: #ffffff;
   border-radius: 5px;
+  background-color: rgba(0,0,0,0.1);
 }
 
-.materials .btn-promo,
-.delivery .btn-promo {
-  background-color: #dda028;
+.btn-promo:hover {
+  background-color:rgba(0,0,0,0.2);
 }
 
-.tools .btn-promo {
-  background-color: #429dc7;
-}
-
-.technics .btn-promo {
-  background-color: #b76dbc;
-}
-
-.sale .btn-promo {
-  background-color: #77bc6d;
+.btn-promo:active {
+  background-color:rgba(0,0,0,0.3);
 }
 
 .btn {
@@ -464,8 +456,16 @@ input[type="search"] {
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
-  background-color: #ef3644;
+  background-color: #ef3643;
   border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: #ca2c37;
+}
+
+.btn:active {
+  background-color: #ba2732;
 }
 
 .promo-slider {
@@ -728,6 +728,11 @@ input[type="search"] {
   padding-left: 24px;
   border-top: 1px solid #405069;
   border-bottom: 1px solid #293449;
+}
+
+.services-slider-controls label:hover {
+  background-color: #293449;
+  cursor: pointer;
 }
 
 #services-btn-1:checked ~ .services-slider-controls label[for="services-btn-1"],
@@ -1049,9 +1054,11 @@ input[type="search"] {
 }
 
 .footer .row-top {
-  background-color: #32425C;
   margin-bottom: 0;
   padding-bottom: 40px;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #32425C;
 }
 
 .logo-column {
@@ -1096,7 +1103,7 @@ input[type="search"] {
 }
 
 .bottom>a {
-  color: #fecf7d;
+  color: #ffd180;
 }
 
 .top a:last-child,
@@ -1104,22 +1111,38 @@ input[type="search"] {
   padding-right: 0;
 }
 
+.top>a:hover,
+.bottom>a:hover {
+  text-decoration: underline;
+}
+
+.top>a:active,
+.bottom>a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
 .footer .row-bottom {
  background-color: #293448;
  padding: 20px 0;
+ font-size: 16px;
+ line-height: 18px;
 }
 
 .copyright {
   float: left;
-  width: 200px;
+  width: 230px;
+  margin-right: 150px;
 }
 
 .social {
   float: left;
-  width: 200px;
+  width: 160px;
+  margin-right: 100px;
 }
 
 .social-btn {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 40px;
@@ -1129,9 +1152,48 @@ input[type="search"] {
   border-radius: 50%;
 }
 
+.social-btn:hover,
+.social-btn:active {
+  background-color: #ee3643;
+}
+
+.social-btn:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  line-height: 18px;
+  font-family: "symbols-technomart";
+  color: #ffffff;
+}
+
+.social-btn-vk:before {
+  content: "\76";
+  top: 10px;
+  left: 10px;
+}
+
+.social-btn-fb:before {
+  content: "\66";
+  top: 10px;
+  left: 15px;
+}
+
+.social-btn-inst:before {
+  content: "📷";
+  top: 10px;
+  left: 12px;
+}
+
 .feedback {
   float: left;
-  width: 150px;
+  width: 160px;
+}
+
+.design {
+  float: right;
+  width: 140px;
 }
 
 .feedback a,
@@ -1140,9 +1202,15 @@ input[type="search"] {
   color: #fecf7d;
 }
 
-.design {
-  float: right;
-  width: 150px;
+.feedback a:hover,
+.design a:hover {
+  text-decoration: underline;
+}
+
+.feedback a:active,
+.design a:active {
+  text-decoration: none;
+  color: #ee3643;
 }
 
 
