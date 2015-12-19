@@ -878,16 +878,64 @@ input[type="search"] {
 
 /*Catalog page styles*/
 
+.catalog-header {
+  margin-bottom: 26px;
+}
+
 .profile-block {
   float: right;
-  width: 250px;
+  width: 300px;
 }
 
 .user-name {
-  padding: 12px 20px;
+  position: relative;
+  padding: 12px 15px;
+  font-size: 21px;
   text-decoration: none;
   color: #000000;
   background-color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.user-name:before {
+  content: "👨";
+  margin-right: 10px;
+  color: #c5c5c5;
+  font-size: 18px;
+  font-family: "symbols-technomart";
+}
+
+.user-name:after {
+  content: "\241b";
+  margin-left: 37px;
+  color: #c5c5c5;
+  font-size: 18px;
+  font-family: "symbols-technomart";
+}
+
+.orders,
+.profile {
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+}
+
+.orders {
+  margin-left: 20px;
+  /*margin-right: 13px;*/
+}
+
+.orders:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 4px;
+  height: 4px;
+  background-color: #32425c;
+  border-radius: 50%;
+
 }
 
 .page-header {
@@ -898,28 +946,43 @@ input[type="search"] {
   margin-bottom: 20px;
 }
 
-.breadcrumbs ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.breadcrumbs li {
-  display: inline;
-}
-
-.breadcrumbs a {
-  margin-right: 20px;
+.breadcrumbs-item {
+  /*margin-right: 20px;*/
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
   text-decoration: none;
+  text-transform: uppercase;
+}
+
+.breadcrumbs-item:after {
+  content: "\3e";
+  margin-left: 15px;
+  margin-right: 15px;
+  font-family: "symbols-technomart";
+  font-size: 14px;
+  line-height: 20px;
+  color: #c1c6ce;
+}
+
+.icon-home {
+  font-size: 16px;
+  line-height: 20px;
+  color: #c1c6ce;
 }
 
 .page-title {
-  padding: 40px;
+  padding: 35px;
+  margin-bottom: 20px;
   background-color: #f2f6f9;
 }
 
 .page-title h1 {
   margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425c;
+  text-transform: uppercase;
 }
 
 .catalog{
@@ -934,17 +997,27 @@ input[type="search"] {
 .filter-title {
   margin-bottom: 10px;
   padding: 10px;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
   background-color: #f8f3ed;
   border-radius: 5px;
 }
 
 .filter-block {
   width: 200px;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .filter-name {
   margin-bottom: 10px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
   text-transform: uppercase;
 }
 

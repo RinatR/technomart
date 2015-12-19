@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Cuprum&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header catalog-header">
         <div class="header-row-top">
           <div class="layout-center clearfix">
             <div class="logo">
@@ -40,7 +41,7 @@
             <div class="profile-block">
               <div class="user-name">Равшан Джамшутович</div>
               <a class="orders" href="#">Мои заказы</a>
-              <a class="account" href="#">Личный кабинет</a>
+              <a class="profile" href="#">Личный кабинет</a>
             </div>
           </div>
           <div class="header-row-bottom">
@@ -59,12 +60,10 @@
     <header class="page-header">
       <div class="layout-center">
         <div class="breadcrumbs">
-          <ul>
-            <li> </li>
-            <li><a href="#">Каталог </a> </li>
-            <li><a href="#">Инструменты </a> </li>
-            <li>Перфораторы</li>
-          </ul>
+          <a class="breadcrumbs-item icon-home" href="#"></a>
+          <a class="breadcrumbs-item" href="#">Каталог </a>
+          <a class="breadcrumbs-item" href="#">Инструменты </a>
+          <span class="breadcrumbs-item">Перфораторы </span>
         </div>
         <div class="page-title">
           <h1>Перфораторы </h1>
@@ -77,7 +76,7 @@
           <form action="/echo" method="post">
             <div class="filter-title">Фильтр:</div>
             <div class="filter-block">
-              <div class="filter-name">Цена</div>
+              <div class="filter-name">Цена:</div>
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar"> </div>
@@ -91,7 +90,7 @@
               </div>
             </div>
             <div class="filter-block">
-              <div class="filter-name">Производители</div>
+              <div class="filter-name">Производители:</div>
               <div class="filter-controls">
                 <input type="checkbox" name="bosch" id="bosch" checked>
                 <label for="bosch">Bosch</label>
@@ -114,7 +113,7 @@
               </div>
             </div>
             <div class="filter-block">
-              <div class="filter-name">Питание</div>
+              <div class="filter-name">Питание:</div>
               <div class="filter-controls">
                 <input type="radio" name="power" id="battery" checked>
                 <label for="battery">Аккумуляторные</label>
