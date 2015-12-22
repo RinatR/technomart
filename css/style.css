@@ -991,13 +991,14 @@ input[type="search"] {
 
 .left-filter {
   float: left;
-  width: 200px;
+  width: 220px;
 }
 
 .filter-title {
   margin-bottom: 10px;
   padding: 10px;
   padding-left: 20px;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1006,10 +1007,14 @@ input[type="search"] {
 }
 
 .filter-block {
-  width: 200px;
+  width: 220px;
   margin-bottom: 20px;
   padding-bottom: 22px;
   border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-power {
+  border-bottom: none;
 }
 
 .filter-name {
@@ -1038,7 +1043,7 @@ input[type="search"] {
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 80%;
   height: 2px;
   background-color: #00ca74;
 }
@@ -1061,18 +1066,20 @@ input[type="search"] {
 }
 
 .range-controls .max-toggle {
-  left: 125px;
+  left: 160px;
 }
 
 .price-controls {
+  position: relative;
   font-size: 0;
+
 }
 
 .price-controls input {
   display: inline-block;
   vertical-align: middle;
-  width: 30%;
-  padding: 10px;
+  width: 95px;
+  padding: 10px 0;
   font-size: 16px;
   text-align: center;
   border: none;
@@ -1081,20 +1088,116 @@ input[type="search"] {
   background-color: #f1f1f1;
 }
 
+.min-price {
+  margin-right: 30px;
+}
+
+.price-controls:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background-color: #000000;
+  top: 50%;
+  left: 105px;
+}
+
+.filter-controls {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.filter-controls input[type="radio"],
+.filter-controls input[type="checkbox"] {
+  display: none;
+}
+
+.filter-controls input[type="radio"] + label,
+.filter-controls input[type="checkbox"] + label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 35px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.filter-controls input[type="radio"] + label:before,
+.filter-controls input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  left: 0;
+  font-family: "symbols-technomart";
+  font-size: 28px;
+  color: #c1c1c1;
+}
+
+.filter-controls input[type="checkbox"] + label:before {
+  content: "\2610";
+}
+
+.filter-controls input[type="checkbox"]:checked + label:before {
+  content: "\2611";
+}
+
+.filter-controls input[type="radio"] + label:before {
+  content: "\25cb";
+}
+
+.filter-controls input[type="radio"]:checked + label:before {
+  content: "\25cf";
+}
+
+.filter-controls input[type="radio"] + label:hover:before,
+.filter-controls input[type="checkbox"] + label:hover:before {
+  color: #b5b5b5;
+}
+
+.filter-btn {
+  width: 138px;
+  color: #000000;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.filter-btn:hover {
+  background-color: #ffffff;
+  border-color: #bdc6ca;
+}
+
 .catalog-content {
   float: right;
   width: 700px;
 }
 
 .top-filter {
-  padding: 10px;
+  margin-bottom: 16px;
+  padding: 10px 20px;
   background-color: #f8f3ed;
+}
+
+.top-filter a,
+.top-filter span {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.top-filter span {
+  margin-right: 140px;
 }
 
 .top-filter a {
   text-decoration: none;
   color: #000000;
-
 }
 
 .catalog-items {
