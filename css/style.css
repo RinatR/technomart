@@ -1248,9 +1248,11 @@ input[type="search"] {
 }
 
 .catalog-items .item {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 218px;
+  /*min-height: 316px;*/
   margin-right: 20px;
   margin-bottom: 20px;
   font-family: "PT Sans", sans-serif;
@@ -1265,7 +1267,76 @@ input[type="search"] {
 }
 
 .catalog-items .item-image {
-  margin-bottom: 13px;
+  padding-top: 22px;
+  margin-bottom: 18px;
+}
+
+.catalog-items .item-actions {
+  visibility: hidden;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  padding: 42px;
+}
+
+.btn-action-buy {
+  position: relative;
+  width: 135px;
+  padding: 10px 0;
+  margin-bottom: 7px;
+  background-color: #63a63e;
+  box-shadow: 0 3px 0 0 #367315;
+}
+
+.item-actions .icon-basket:before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 17px;
+  line-height: 18px;
+  opacity: 0.3;
+}
+
+.btn-action-buy:hover {
+  background-color: #5fbb2d;
+}
+
+.btn-action-buy:hover:before {
+  opacity: 1;
+}
+
+.btn-action-buy:active {
+  background-color: #518534;
+}
+
+.btn-action-bookmark {
+  width: 129px;
+  padding: 7px 0;
+  border: 3px solid #63a63e;
+  background-color: #ffffff;
+  color: #32425c;
+}
+
+.btn-action-bookmark:hover {
+  background-color: #ffffff;
+  border-color: #32425c;
+}
+
+.btn-action-bookmark:active {
+  background-color: #ffffff;
+  opacity: 0.3;
+}
+
+.catalog-items .item:hover {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.catalog-items .item:hover .item-actions {
+  visibility: visible;
+}
+
+.catalog-items .item:hover .item-image {
+  visibility: hidden;
 }
 
 .catalog-items .item-title {
@@ -1279,6 +1350,7 @@ input[type="search"] {
 .catalog-items .old-price {
   display: block;
   margin-bottom: 13px;
+  min-height: 20px;
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1286,13 +1358,18 @@ input[type="search"] {
   color: #999999;
 }
 
-.btn-price {
+.btn-catalog-price {
+  /*position: absolute;*/
+  /*bottom: 20px;*/
+  /*left: 50%;*/
+  /*-webkit-transform: translateX(-50%);*/
+  /*transform: translateX(-50%);*/
   width: 120px;
+  margin-bottom: 20px;
   font-family:"PT Sans", sans-serif;
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
-  margin-bottom: 20px;
 }
 
 .btn-paginator {
