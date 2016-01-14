@@ -515,28 +515,6 @@ input[type="search"] {
   line-height: 24px;
 }
 
-.arrow {
-  position: absolute;
-  top: 50%;
-  width: 25px;
-  height: 25px;
-  margin-top: -12.5px;
-  border: 3px solid #ffffff;
-  border-right: none;
-  border-bottom: none;
-  cursor: pointer;
-}
-
-.prev {
-  left: 27px;
-  transform: rotate(-45deg);
-}
-
-.next {
-  right: 27px;
-  transform: rotate(135deg);
-}
-
 .btn-catalog {
   width: 195px;
   padding: 10px 0;
@@ -560,7 +538,7 @@ input[type="search"] {
   text-align: center;
 }
 
-.promo-slider-controls label {
+.promo-slider-controls .circle-toggle {
   display: inline-block;
   vertical-align: middle;
   width: 6px;
@@ -571,8 +549,31 @@ input[type="search"] {
   cursor: pointer;
 }
 
-#promo-btn-1:checked ~ .promo-slider-controls label[for="promo-btn-1"],
-#promo-btn-2:checked ~ .promo-slider-controls label[for="promo-btn-2"] {
+.promo-slider-controls .arrow-toggle {
+  position: absolute;
+  top: -80px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-top: -12.5px;
+  border: 3px solid #ffffff;
+  border-right: none;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: -283px;
+  transform: rotate(-45deg);
+}
+
+.next {
+  left: 255px;
+  transform: rotate(135deg);
+}
+
+#promo-btn-1:checked ~ .promo-slider-controls .circle-toggle[for="promo-btn-1"],
+#promo-btn-2:checked ~ .promo-slider-controls .circle-toggle[for="promo-btn-2"] {
   background-color: #ee3643;
 }
 
@@ -584,10 +585,6 @@ input[type="search"] {
 #promo-btn-2:checked ~ .promo-slider-inner .promo-slides {
   -webkit-transform: translate(-620px);
   transform: translate(-620px);
-}
-
-.popular {
-  margin-bottom: 20px;
 }
 
 .popular-header {
@@ -620,13 +617,11 @@ input[type="search"] {
   margin-bottom: 20px;
 }
 
-.products .items,
-.brands .items {
+.products-list {
   font-size: 0;
 }
 
-.products .item,
-.brands .item {
+.product-item {
   display: inline-block;
   vertical-align: top;
   width: 218px;
@@ -638,16 +633,16 @@ input[type="search"] {
   border: 1px solid #e5e5e5;
 }
 
-.products .item:last-child,
-.brands .item:nth-child(4n) {
+.product-item:last-child {
   margin-right: 0;
 }
 
-.products .item-image {
+.product-item-image {
+  padding-top: 22px;
   margin-bottom: 13px;
 }
 
-.products .item-title {
+.product-item-title {
   margin-bottom: 18px;
   padding: 0 25px;
   font-size: 18px;
@@ -655,7 +650,7 @@ input[type="search"] {
   color: #000000;
 }
 
-.products .old-price {
+.product-old-price {
   display: block;
   margin-bottom: 13px;
   font-size: 17px;
@@ -678,8 +673,28 @@ input[type="search"] {
   margin-bottom: 80px;
 }
 
-.brands .item {
+.brands-list {
   margin-bottom: 20px;
+  font-size: 0;
+  line-height: 143px;
+}
+
+.brand-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 218px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+}
+
+.brand-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.brand-item img {
+  vertical-align: middle;
 }
 
 .services {
@@ -750,7 +765,7 @@ input[type="search"] {
 .services-slider-inner {
   float: right;
   width: 620px;
-  padding-left: 20px;
+  min-height: 284px;
   overflow: hidden;
 }
 
@@ -759,10 +774,9 @@ input[type="search"] {
 }
 
 .services-slide {
-  position: relative;
   float: left;
   width: 620px;
-  min-height: 226px;
+  min-height: 284px;
 }
 
 .services-slide-title {
@@ -797,6 +811,18 @@ input[type="search"] {
 #services-btn-3:checked ~ .services-slider-inner .services-slides {
   -webkit-transform: translate(-1240px);
   transform: translate(-1240px);
+}
+
+.services-slide:first-child {
+  background: url(../img/service_slide_delivery.png) no-repeat 100% 0;
+}
+
+.services-slide:last-child {
+  background: url(../img/service_slide_credit.png) no-repeat 100% 0;
+}
+
+.services-slide:nth-child(2) {
+  background: url(../img/service_slide_garanty.png) no-repeat 100% 0;
 }
 
 .company-info {
@@ -867,7 +893,7 @@ input[type="search"] {
   width: 260px;
   height: 159px;
   background-color: #e5e5e5;
-  margin-bottom: 42px;
+  margin-bottom: 47px;
 }
 
 .btn-contacts {
@@ -1386,7 +1412,7 @@ input[type="search"] {
 }
 
 .new-label {
-  display:block;
+  display: block;
   position: relative;
   top: -297px;
   left: 180px;
@@ -1643,6 +1669,236 @@ input[type="search"] {
   color: #ee3643;
 }
 
+/*Modal windows styles*/
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 25%;
+  width: 620px;
+  background-color: #ffffff;
+  border-top: 7px solid #ee3643;
+  box-shadow: 0 0 55px 1px #000000;
+}
+
+.modal-content {
+  width: 460px;
+  margin: 0 auto;
+  padding: 38px 0;
+  font-size: 0;
+}
+
+.modal-content .form-controls {
+  width: 220px;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 23px;
+  margin-right: 20px;
+}
+
+.form-controls + .form-controls {
+  margin-right: 0;
+}
+
+.feedback-form input[type="text"] {
+  width: 188px;
+  padding: 10px 14px;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  outline: none;
+}
+
+.feedback-form textarea {
+  width: 430px;
+  height: 110px;
+  padding: 10px 14px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+  resize: none;
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.green-circle {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 64px;
+  height: 64px;
+  margin-right: 33px;
+  border-radius: 50%;
+  background-color: #63a63e;
+}
+
+.green-circle:before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 10px;
+  width: 19px;
+  height: 6px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+}
+
+.green-circle:after {
+  content: "";
+  position: absolute;
+  top: 31px;
+  left: 20px;
+  width: 36px;
+  height: 6px;
+  transform: rotate(-45deg);
+  background-color: #ffffff;
+}
+
+.modal-content span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 30px;
+}
+
+.modal-footer {
+  font-size: 0;
+  background-color: #f1f1f1;
+  padding: 40px 80px;
+}
+
+.btn-modal {
+  display: inline-block;
+  width: 220px;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+}
+
+.btn-red {
+  margin-right: 20px;
+}
+
+.btn-white {
+  margin-right: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-white:hover {
+  background-color: #ffffff;
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 0;
+  left: 580px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.modal-content-close:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -2px 0 0 -13px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 26px;
+  height: 5px;
+  background-color: #ee3643;
+}
+
+.modal-content-close:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -2px 0 0 -13px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 26px;
+  height: 5px;
+  background-color: #ee3643;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+@-webkit-keyframes feedback {
+  0% {
+    -webkit-transform: translateY(20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes feedback {
+  0% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal-error {
+  -webkit-animation-name: shake;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-iteration-count: 2;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
+}
+
+.modal-show {
+  display: block;
+  -webkit-animation-name: feedback;
+  -webkit-animation-duration: 0.2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-duration: 0.2s;
+  animation-name: feedback;
+  animation-fill-mode: forwards;
+}
 
 
 

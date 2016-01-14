@@ -15,8 +15,11 @@
             <div class="logo">
               <a href="index.html">Техномарт</a>
             </div>
-            <div class="header-element search">
-              <input type="search" name="search-field" id="search" placeholder="Поиск:">
+            <div class="search">
+              <form action="/echo" method="post">
+                <i class="icons icon-search"> </i>
+                <input type="search" name="search-field" id="search" placeholder="Поиск:">
+              </form>
             </div>
             <div class="header-element bookmarks">
               <a href="#">Закладки: 0</a>
@@ -281,7 +284,7 @@
                 <nav class="footer-navigation top">
                   <a href="#">Компания</a>
                   <a href="#">Новости</a>
-                  <a href="#">Каталог</a>
+                  <a href="catalog.html">Каталог</a>
                   <a href="#">Доставка</a>
                   <a href="#">Контакты</a>
                 </nav>
@@ -296,7 +299,7 @@
           </div>
           <div class="row-bottom">
             <div class="layout-center clearfix">
-              <div class="copyright">
+              <div class="copyright">&copy;
                 2010-2015 Компания Техномарт
                 Все права защищены
               </div>
@@ -316,5 +319,18 @@
             </div>
           </div>
     </footer>
+
+    <div class="modal cart-modal">
+      <div class="modal-content">
+        <div class="green-circle"> </div>
+        <span>Товар добавлен в корзину! </span>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-modal btn-red" href="#">Оформить заказ</a>
+        <a class="btn btn-modal btn-white" href="#">Продолжить покупки </a>
+      </div>
+      <div class="modal-content-close"> </div>
+    </div>
+    <script src="js/cart-modal.js"></script>
   </body>
 </html>
