@@ -88,6 +88,11 @@ body {
   color: #000000;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .layout-center{
   width: 940px;
   margin: 0 auto;
@@ -382,6 +387,7 @@ input[type="search"] {
 }
 
 .promo-block {
+  position: relative;
   float: left;
   width: 254px;
   height: 100px;
@@ -391,12 +397,34 @@ input[type="search"] {
   margin-bottom: 20px;
 }
 
+.promo-block:before {
+  content: "";
+  position: absolute;
+  background: url("../img/sprite.png") no-repeat;
+}
+
 .materials {
   background-color: #f6b22d;
 }
 
+.materials:before {
+  top: 24%;
+  right: 14%;
+  width: 44px;
+  height: 65px;
+  background-position: -93px -5px;
+}
+
 .tools {
   background-color: #4aaedf;
+}
+
+.tools:before {
+  top: 27%;
+  right: 9%;
+  width: 75px;
+  height: 61px;
+  background-position: -304px -5px;
 }
 
 .technics {
@@ -404,14 +432,38 @@ input[type="search"] {
   margin-right: 0;
 }
 
+.technics:before {
+  top: 24%;
+  right: 10%;
+  width: 78px;
+  height: 62px;
+  background-position: -147px -5px;
+}
+
 .sale {
   margin-right: 0;
   background-color: #85d179;
 }
 
+.sale:before {
+  top: 21%;
+  right: 15%;
+  width: 59px;
+  height: 72px;
+  background-position: -235px -5px;
+}
+
 .delivery {
   margin-right: 0;
   background-color: #f5b22c;
+}
+
+.delivery:before {
+  top: 26%;
+  right: 10%;
+  width: 78px;
+  height: 63px;
+  background-position: -5px -5px;
 }
 
 .promo-block span {
@@ -669,6 +721,10 @@ input[type="search"] {
   margin-bottom: 20px;
 }
 
+.product-item:hover {
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
 .brands {
   margin-bottom: 80px;
 }
@@ -693,8 +749,21 @@ input[type="search"] {
   margin-right: 0;
 }
 
-.brand-item img {
+.brand-item-image {
   vertical-align: middle;
+}
+
+.brand-item:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
+}
+
+.brand-item:active .brand-item-image {
+  opacity: 0.3;
+}
+
+.brand-item:active {
+  box-shadow: 0 5px 5px rgba(41, 52, 73, 0.5);
 }
 
 .services {
@@ -886,19 +955,18 @@ input[type="search"] {
 
 .company-info .contacts {
   float: right;
-  width: 260px;
+  width: 300px;
 }
 
 .map {
-  width: 260px;
+  width: 300px;
   height: 159px;
   background-color: #e5e5e5;
   margin-bottom: 47px;
 }
 
 .btn-contacts {
-  width: 240px;
-
+  width: 280px;
 }
 /*Index page styles end*/
 
